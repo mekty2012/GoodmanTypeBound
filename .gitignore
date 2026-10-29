@@ -1,0 +1,7 @@
+# Lake: fetched packages and build output.
+lean/.lake/
+
+# Runs of lean/tools/verify_catalogue.py (logs and a fresh build tree).
+lean/verification_runs/
+
+__pycache__/

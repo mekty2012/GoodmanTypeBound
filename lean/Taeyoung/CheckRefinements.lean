@@ -1,0 +1,102 @@
+import Taeyoung.Paper.Refinements
+
+/-!
+# Axiom audit for Section 5.1
+
+One `#print axioms` line for each theorem listed in `Taeyoung/Paper/Refinements.lean`.
+Every line must read `… depends on axioms: [propext, Classical.choice, Quot.sound]`.
+-/
+
+-- Atlas 48
+#print axioms Taeyoung.Paper.Refinements.Graph048.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph048.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph048.not_turanOptimal_three
+-- Atlas 50
+#print axioms Taeyoung.Paper.Refinements.Graph050.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph050.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph050.not_turanOptimal_three
+-- Atlas 129
+#print axioms Taeyoung.Paper.Refinements.Graph129.not_turanOptimal_constant
+#print axioms Taeyoung.Paper.Refinements.Graph129.not_turanOptimal_tensor
+-- Atlas 140
+#print axioms Taeyoung.Paper.Refinements.Graph140.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph140.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph140.not_turanOptimal_three
+-- Atlas 141
+#print axioms Taeyoung.Paper.Refinements.Graph141.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph141.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph141.not_turanOptimal_three
+-- Atlas 143
+#print axioms Taeyoung.Paper.Refinements.Graph143.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph143.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph143.not_turanOptimal_three
+-- Atlas 149
+#print axioms Taeyoung.Paper.Refinements.Graph149.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph149.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph149.not_turanOptimal_three
+#print axioms Taeyoung.Paper.Refinements.Graph149.not_turanOptimal_four
+#print axioms Taeyoung.Paper.Refinements.Graph149.not_turanOptimal_five
+-- Atlas 152
+#print axioms Taeyoung.Paper.Refinements.Graph152.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph152.turanOptimal
+-- Atlas 158
+#print axioms Taeyoung.Paper.Refinements.Graph158.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph158.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph158.not_turanOptimal_three
+-- Atlas 159
+#print axioms Taeyoung.Paper.Refinements.Graph159.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph159.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph159.not_turanOptimal_three
+-- Atlas 166
+#print axioms Taeyoung.Paper.Refinements.Graph166.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph166.turanOptimal
+-- Atlas 170
+#print axioms Taeyoung.Paper.Refinements.Graph170.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph170.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph170.not_turanOptimal_three
+#print axioms Taeyoung.Paper.Refinements.Graph170.not_turanOptimal_four
+#print axioms Taeyoung.Paper.Refinements.Graph170.not_turanOptimal_five
+-- Atlas 172
+#print axioms Taeyoung.Paper.Refinements.Graph172.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph172.turanOptimal
+-- Atlas 173
+#print axioms Taeyoung.Paper.Refinements.Graph173.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph173.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph173.not_turanOptimal_three
+#print axioms Taeyoung.Paper.Refinements.Graph173.turan4_value
+-- Atlas 182
+#print axioms Taeyoung.Paper.Refinements.Graph182.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph182.turanOptimal
+-- Atlas 184
+#print axioms Taeyoung.Paper.Refinements.Graph184.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph184.turanOptimal
+-- Atlas 186
+#print axioms Taeyoung.Paper.Refinements.Graph186.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph186.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph186.not_turanOptimal_three
+-- Atlas 189
+#print axioms Taeyoung.Paper.Refinements.Graph189.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph189.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph189.not_turanOptimal_three
+#print axioms Taeyoung.Paper.Refinements.Graph189.not_turanOptimal_four
+-- Atlas 190
+#print axioms Taeyoung.Paper.Refinements.Graph190.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph190.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph190.not_turanOptimal_three
+#print axioms Taeyoung.Paper.Refinements.Graph190.not_turanOptimal_four
+-- Atlas 197
+#print axioms Taeyoung.Paper.Refinements.Graph197.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph197.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph197.not_turanOptimal_three
+-- Atlas 198
+#print axioms Taeyoung.Paper.Refinements.Graph198.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph198.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph198.not_turanOptimal_three
+-- Atlas 204
+#print axioms Taeyoung.Paper.Refinements.Graph204.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph204.turanOptimal
+#print axioms Taeyoung.Paper.Refinements.Graph204.not_turanOptimal_three
+#print axioms Taeyoung.Paper.Refinements.Graph204.not_turanOptimal_four
+-- Atlas 206
+#print axioms Taeyoung.Paper.Refinements.Graph206.lowerBoundRange
+#print axioms Taeyoung.Paper.Refinements.Graph206.turanOptimal
