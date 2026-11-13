@@ -28,7 +28,7 @@ Before any compilation, independent Python checks confirm that the 117 rows
 are exactly the Atlas graphs in scope, that each row's Lean edge list is the
 Atlas graph with the stated invariants, and that the row statuses agree with
 the Markdown catalogue.  After the rows, the kernel-checked counts in
-`Taeyoung.Catalogue.Counts` are compiled.
+`Goodman.Catalogue.Counts` are compiled.
 
 A row is verified when every module it depends on compiles, its audit
 compiles, and the theorem depends on no axioms beyond `propext`,
@@ -177,7 +177,7 @@ class SharedUnit:
 class Project:
     """The Lean sources of this project and their import graph."""
 
-    def __init__(self, root: Path, lib: str = 'Taeyoung'):
+    def __init__(self, root: Path, lib: str = 'Goodman'):
         self.root = root
         self.lib = lib
         self.modules: dict[str, Module] = {}
@@ -630,7 +630,7 @@ the row theorem has exactly the catalogue statement, the metadata agrees with
 it, and the axioms the theorem depends on are printed.
 -/
 
-open Taeyoung
+open Goodman
 
 example : {statement} {module}.graph := {module}.status
 example : {module}.metadata.atlasId = {atlas} := rfl
@@ -995,7 +995,7 @@ class Verifier:
                     wall_seconds=round(time.monotonic() - t0, 1), modules=len(records),
                     **summarize_modules(records), machine_at_start=machine,
                     checked='row count 117; positive, negative, open and verified counts '
-                            '(Taeyoung/Catalogue/Counts.lean)')
+                            '(Goodman/Catalogue/Counts.lean)')
 
     # ----------------------------------------------------------------- driver
 
@@ -1259,7 +1259,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument('--lake', help='path to the lake executable (default: from PATH)')
     parser.add_argument('--plan', action='store_true', help='print the units and exit without compiling')
     parser.add_argument('--skip-static-checks', action='store_true', help='skip the Python graph and scope checks')
-    parser.add_argument('--skip-counts', action='store_true', help='skip Taeyoung.Catalogue.Counts')
+    parser.add_argument('--skip-counts', action='store_true', help='skip Goodman.Catalogue.Counts')
     args = parser.parse_args(argv)
     if args.out and args.resume:
         parser.error('--out and --resume are mutually exclusive')

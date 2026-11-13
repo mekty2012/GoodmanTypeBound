@@ -1,0 +1,12 @@
+import Goodman.Methods.RootedSOS.Atlas43CoefficientBase
+
+namespace Goodman.Methods.RootedSOS.Atlas43Coefficients
+
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 40000000
+
+theorem block1_witness_row_043 :
+    block₁WitnessRowValid 43 = true := by
+  decide +kernel
+
+end Goodman.Methods.RootedSOS.Atlas43Coefficients

@@ -33,19 +33,19 @@ After the first verified row, two **negative controls** show that the audit can 
 
 If either control does not fail as expected, the run is reported as not verified.
 
-After the rows, `Taeyoung.Catalogue.Counts` is compiled. It checks in the kernel that the catalogue has 117 rows: 94 positive, 23 negative, 0 open, all verified.
+After the rows, `Goodman.Catalogue.Counts` is compiled. It checks in the kernel that the catalogue has 117 rows: 94 positive, 23 negative, 0 open, all verified.
 
-The classification itself is `Taeyoung/Catalogue/Rows.lean`, the list of the 117 rows' metadata (Atlas ID, status, formalization state), together with the counts in `Taeyoung/Catalogue/Counts.lean`. Each row's theorem is `GraphNNN.status` in `Taeyoung/Examples/GraphNNN.lean`. The script does not compile the general theorems of the paper; `lake build Taeyoung.CheckPaper` compiles them and prints their axioms (see the top-level `README.md`).
+The classification itself is `Goodman/Catalogue/Rows.lean`, the list of the 117 rows' metadata (Atlas ID, status, formalization state), together with the counts in `Goodman/Catalogue/Counts.lean`. Each row's theorem is `GraphNNN.status` in `Goodman/Examples/GraphNNN.lean`. The script does not compile the general theorems of the paper; `lake build Goodman.CheckPaper` compiles them and prints their axioms (see the top-level `README.md`).
 
 ### Density ranges and Turán optimality
 
-The refinements of Section 5.1 for the 23 violating graphs (Table 1: the density range on which the bound still holds, and the integers `k` at which `T_k` is or is not optimal) are in `Taeyoung/Paper/Refinements/GraphNNN.lean`, indexed by `Taeyoung/Paper/Refinements.lean`. They are not part of this script's run. To compile them and print their axioms, run from `lean/`
+The refinements of Section 5.1 for the 23 violating graphs (Table 1: the density range on which the bound still holds, and the integers `k` at which `T_k` is or is not optimal) are in `Goodman/Paper/Refinements/GraphNNN.lean`, indexed by `Goodman/Paper/Refinements.lean`. They are not part of this script's run. To compile them and print their axioms, run from `lean/`
 
 ```sh
-LEAN_NUM_THREADS=3 lake build Taeyoung.CheckRefinements
+LEAN_NUM_THREADS=3 lake build Goodman.CheckRefinements
 ```
 
-Every line must read `… depends on axioms: [propext, Classical.choice, Quot.sound]`. The density ranges `p ≥ 3/4`, `p ≥ 4/5` and the single densities `p = 2/3`, `p = 3/4` come from the 24 six-point certificates in `Taeyoung/Methods/RootedSOS/Refinement/`.
+Every line must read `… depends on axioms: [propext, Classical.choice, Quot.sound]`. The density ranges `p ≥ 3/4`, `p ≥ 4/5` and the single densities `p = 2/3`, `p = 3/4` come from the 24 six-point certificates in `Goodman/Methods/RootedSOS/Refinement/`.
 
 ## What you must still read yourself
 
@@ -53,13 +53,13 @@ A machine check proves the statements as written. A reader should confirm that t
 
 | Definition | File |
 |---|---|
-| graphons on an arbitrary probability space; homomorphism density `homDensity`; edge density | `Taeyoung/Foundation/Graphon.lean` |
-| chromatic polynomial and chromatic number, by their defining properties | `Taeyoung/Foundation/ChromaticPolynomial.lean` |
-| the target $(1-p)^{v(H)}\chi_H(1/(1-p))$ and the admissible range $p \ge 1 - 1/(\chi(H)-1)$ | `Taeyoung/Foundation/ChromaticTarget.lean`, `Taeyoung/Foundation/Status.lean` |
-| `SatisfiesLowerBound`, `ViolatesLowerBound` | `Taeyoung/Foundation/Status.lean` |
-| each row's graph (an explicit edge list on `Fin n`) | `Taeyoung/Examples/GraphNNN.lean` |
-| the classification: the 117 rows, each row's status, and the counts | `Taeyoung/Catalogue/Rows.lean`, `Taeyoung/Catalogue/Counts.lean` |
-| for the refinements: the bound on a density range `SatisfiesLowerBoundOn`, optimality of `T_k` `TuranOptimal` | `Taeyoung/Paper/Basic.lean` |
+| graphons on an arbitrary probability space; homomorphism density `homDensity`; edge density | `Goodman/Foundation/Graphon.lean` |
+| chromatic polynomial and chromatic number, by their defining properties | `Goodman/Foundation/ChromaticPolynomial.lean` |
+| the target $(1-p)^{v(H)}\chi_H(1/(1-p))$ and the admissible range $p \ge 1 - 1/(\chi(H)-1)$ | `Goodman/Foundation/ChromaticTarget.lean`, `Goodman/Foundation/Status.lean` |
+| `SatisfiesLowerBound`, `ViolatesLowerBound` | `Goodman/Foundation/Status.lean` |
+| each row's graph (an explicit edge list on `Fin n`) | `Goodman/Examples/GraphNNN.lean` |
+| the classification: the 117 rows, each row's status, and the counts | `Goodman/Catalogue/Rows.lean`, `Goodman/Catalogue/Counts.lean` |
+| for the refinements: the bound on a density range `SatisfiesLowerBoundOn`, optimality of `T_k` `TuranOptimal` | `Goodman/Paper/Basic.lean` |
 
 The Lean kernel, the toolchain and the prebuilt Mathlib are also trusted.
 
@@ -154,6 +154,6 @@ Measured on the authors' machine (Windows 11, 64 GiB RAM) with the same sequenti
 - **The Atlas 43 chain** (shared unit `RootedSOS: Atlas 43 chain`, 1,076 modules, used by Atlas 43 and 196): about 6 hours, peak 15.4 GiB. It is the largest unit.
 - **The twenty compact-certificate rows** (118 … 203): 25–46 minutes each including their certificate modules, peak 9–12 GiB.
 - **Everything else:** most modules take 5–15 seconds and 2–5 GiB; the rows of this group take a few seconds to a few minutes each.
-- **The refinements** (`lake build Taeyoung.CheckRefinements`, not part of the script's run): 24 certificate chains of 19 modules each, about 9 minutes of compile time per chain, so about 4 hours in all, or about 2.5 hours with `LEAN_NUM_THREADS=3`.
+- **The refinements** (`lake build Goodman.CheckRefinements`, not part of the script's run): 24 certificate chains of 19 modules each, about 9 minutes of compile time per chain, so about 4 hours in all, or about 2.5 hours with `LEAN_NUM_THREADS=3`.
 
 A complete run takes on the order of 20 hours.

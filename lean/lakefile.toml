@@ -1,5 +1,5 @@
-name = "TaeyoungVerification"
-defaultTargets = ["Taeyoung"]
+name = "GoodmanVerification"
+defaultTargets = ["Goodman"]
 
 # Mathlib at the tag matching the toolchain; `lake-manifest.json` pins it to
 # commit fabf563a7c95a166b8d7b6efca11c8b4dc9d911f.
@@ -17,9 +17,9 @@ git = "https://github.com/mekty2012/OddCycleGoodman-lean.git"
 rev = "dbaea5a4d2c044a202f1e40647f4b24a1c77b313"
 
 [[lean_lib]]
-name = "Taeyoung"
+name = "Goodman"
 # The `unusedSectionVars` linter fires on essentially every lemma here: these
 # files share broad `variable` blocks, so most lemmas legitimately do not use
 # every ambient instance.  Disable just that linter package-wide (all genuinely
 # useful linters stay on).
-leanOptions = [{name = "linter.unusedSectionVars", value = false}]
+leanOptions = { linter.unusedSectionVars = false }
